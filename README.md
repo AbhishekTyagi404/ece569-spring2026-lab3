@@ -1,79 +1,16 @@
-# ECE 569 – Lab 3
+# ECE 569 Lab 3
 
-## Overview
-This repository contains the work for Lab 3. The lab focuses on processing motion capture data and visualizing the Metafly using ROS.
+This repository contains the implementation for Lab 3.
 
----
+## Main Work
 
-## Repository Structure
+All relevant code and results are inside:
 
-- **Step1/**  
-  Python implementation using NumPy and Matplotlib  
-  Includes Jupyter Notebook, functions, and plots  
+👉 `Lab3/`
 
-- **Step2/**  
-  ROS-based visualization using RViz  
-  Includes TF publisher and launch setup  
+## Contents inside Lab3
 
-- **ws3/**  
-  ROS workspace used for building and running Step 2  
+- Step1: Python implementation (Jupyter Notebook, plots, functions)
+- Step2: ROS visualization using RViz
 
----
-
-## Getting Started
-
-Clone the repository:
-
-```
-git clone https://github.com/AbhishekTyagi404/ece569-spring2026-lab3.git
-cd ece569-spring2026-lab3/Lab3
-```
-
----
-
-## Step 1
-
-- Implemented in Python  
-- Uses Jupyter Notebook  
-- Generates:
-  - Position plots  
-  - Velocity plots  
-  - Orientation plots  
-  - Angular velocity  
-  - Error metric  
-
-Refer to the README inside `Step1/` for details.
-
----
-
-## Step 2
-
-- Uses ROS 2 and RViz  
-- Visualizes Metafly motion using mocap data  
-- Publishes transforms between `world` and `base_link`  
-
-To run:
-
-```
-cd ws3
-colcon build --symlink-install
-source install/setup.bash
-ros2 launch metafly.launch.py
-```
-
-Enable **Show Trail** for `base_link` in RViz.
-
----
-
-## Notes
-
-- Step 1 and Step 2 can be done independently  
-- All required outputs are included in the repository  
-- Test cases for Step 1 pass successfully  
-
----
-
-## Author
-
-Abhishek Tyagi  
-tyagi55@purdue.edu
+Please navigate to the Lab3 folder for full details.
