@@ -1,19 +1,79 @@
-## Lab 3
+# ECE 569 – Lab 3
 
-### Getting Started
+## Overview
+This repository contains the work for Lab 3. The lab focuses on processing motion capture data and visualizing the Metafly using ROS.
 
-First, you will need to create your own personal Lab3 repository on Github from this template repository. You should then give collaboration access `Logan Dihel` (the TA's username is `logdog`)
+---
 
-### Overleaf Instructions
+## Repository Structure
 
-See [this overleaf template](https://www.overleaf.com/read/gbtxqjjmbdpd#c0f8ad) for instructions and your lab report template.
+- **Step1/**  
+  Python implementation using NumPy and Matplotlib  
+  Includes Jupyter Notebook, functions, and plots  
 
-### Next Steps
+- **Step2/**  
+  ROS-based visualization using RViz  
+  Includes TF publisher and launch setup  
 
-You can work on Step 1 or Step 2 independently. Good luck! 🤖
+- **ws3/**  
+  ROS workspace used for building and running Step 2  
 
-#### You can test that you have SSH keys set up correctly by trying to modify these values from wherever you cloned this repository
+---
 
-Your Name: `your name`
+## Getting Started
 
-Your Email: `your email@purdue.edu`
+Clone the repository:
+
+```
+git clone https://github.com/AbhishekTyagi404/ece569-spring2026-lab3.git
+cd ece569-spring2026-lab3/Lab3
+```
+
+---
+
+## Step 1
+
+- Implemented in Python  
+- Uses Jupyter Notebook  
+- Generates:
+  - Position plots  
+  - Velocity plots  
+  - Orientation plots  
+  - Angular velocity  
+  - Error metric  
+
+Refer to the README inside `Step1/` for details.
+
+---
+
+## Step 2
+
+- Uses ROS 2 and RViz  
+- Visualizes Metafly motion using mocap data  
+- Publishes transforms between `world` and `base_link`  
+
+To run:
+
+```
+cd ws3
+colcon build --symlink-install
+source install/setup.bash
+ros2 launch metafly.launch.py
+```
+
+Enable **Show Trail** for `base_link` in RViz.
+
+---
+
+## Notes
+
+- Step 1 and Step 2 can be done independently  
+- All required outputs are included in the repository  
+- Test cases for Step 1 pass successfully  
+
+---
+
+## Author
+
+Abhishek Tyagi  
+tyagi55@purdue.edu
